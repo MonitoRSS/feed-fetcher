@@ -1,6 +1,6 @@
 {
-  "name": "typescript-template",
-  "version": "1.0.0",
+  "name": "@monitorss/request",
+  "version": "0.0.1",
   "description": "",
   "main": "build/index.js",
   "scripts": {
