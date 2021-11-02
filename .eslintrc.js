@@ -21,6 +21,7 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'curly': 'error',
     "eol-last": ["error"],
+    "max-len": ["error", { "code": 100 }],
     "padding-line-between-statements": [
       "error",
       {
