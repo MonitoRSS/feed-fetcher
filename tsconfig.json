@@ -101,7 +101,6 @@
     "src/**/*"
   ],
   "exclude": [
-    "**/*.test.ts",
     "build",
     "node_modules"
   ]
