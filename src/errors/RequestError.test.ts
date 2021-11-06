@@ -24,4 +24,12 @@ describe('RequestError', () => {
       expect(error.code).toEqual(RequestError.CODES.BAD_RESPONSE_CODE);
     });
   });
+
+  describe('TimedOut', () => {
+    it('returns an instance of RequestError', () => {
+      const error = RequestError.TimedOut('message');
+      expect(error).toBeInstanceOf(RequestError);
+      expect(error.code).toEqual(RequestError.CODES.TIMEOUT);
+    });
+  });
 });

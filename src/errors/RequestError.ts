@@ -7,6 +7,7 @@ class RequestError extends Error {
   static CODES = {
     BAD_RESPONSE_CODE: 50042,
     BLOCKED_BY_CLOUDFLARE: 50043,
+    TIMEOUT: 50044,
   };
 
   /**
@@ -28,6 +29,16 @@ class RequestError extends Error {
    */
   static Cloudflare(message = 'The server has blocked the request via Cloudflare.') {
     return new RequestError(this.CODES.BLOCKED_BY_CLOUDFLARE, message);
+  }
+
+  /**
+   * Used when the request has taken too long to complete.
+   * 
+   * @param message The user-friendly error message.
+   * @returns The RequestError instance.
+   */
+  static TimedOut(message: string = 'The request took too long and timed out.') {
+    return new RequestError(this.CODES.TIMEOUT, message);
   }
 
   isCloudflare() {
