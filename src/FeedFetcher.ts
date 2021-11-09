@@ -34,6 +34,7 @@ class FeedFetcher {
     timeout: NodeJS.Timeout,
   } {
     const options: UndiciRequestOptions = {
+      maxRedirections: 5,
       ...initialOptions,
       headers: {
         'user-agent': FeedFetcher.resolveUserAgent(url, this.options?.defaultUserAgent || ''),
